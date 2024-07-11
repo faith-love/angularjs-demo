@@ -1,0 +1,43 @@
+<md-dialog>
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Mango (Fruit)</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content style="min-width:800px;max-height:510px; ">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>全选：<md-checkbox aria-label="Select All" ng-checked="isChecked()" md-indeterminate="isIndeterminate()"
+                ng-click="toggleAll()">
+            </th>
+            <th scope="col">序号</th>
+            <th scope="col">机构名称</th>
+            <th scope="col">机构代码</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="item in list">
+            <td style="width: 120px;">
+              <md-checkbox ng-checked="exists(item, selected)" ng-click="toggle(item, selected)"></md-checkbox>
+            </td>
+            <td>{{$index+1}}</td>
+            <td>{{item.orgName}}</td>
+            <td>{{item.orgCode}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <md-button class="btn btn-success" ng-click="select()" style="margin-right:20px;">
+        确定
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

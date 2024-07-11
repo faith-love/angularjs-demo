@@ -1,0 +1,13 @@
+<div class="tagsContainer">
+  <div class="tagsList">
+    <div class="tagItem" ng-repeat="item in tagList" ng-click="vm.edit(item,$event)">
+      <span>{{item.name}}</span>
+      <md-button class="remove md-fab md-mini" aria-label="" ng-click="vm.remove(item,$event)" ng-if="!readonly">×
+      </md-button>
+    </div>
+    <md-button ng-if="!readonly && (tagList.length < maxTags)" class="add md-fab md-mini md-primary" aria-label="+"
+      ng-click="vm.add()">+
+    </md-button>
+  </div>
+</div>
+{{vm.tagList}}

@@ -1,0 +1,45 @@
+<md-dialog aria-label="Mango (Fruit)">
+  <form ng-cloak class="form-horizontal">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Mango (Fruit)</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="vm.hide()">×</md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content" style="min-width: 600px;min-height: 300px;">
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-2 control-label text-right">姓名:</label>
+          <div class="col-sm-8">
+            <input type="text" ng-model="vm.form.name" class="form-control" id="inputEmail3" placeholder="">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-2 control-label text-right">年龄:</label>
+          <div class="col-sm-8">
+            <input type="text" ng-model="vm.form.age" class="form-control" id="inputEmail3" placeholder="">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-2 control-label text-right">地址:</label>
+          <div class="col-sm-8">
+            <input type="text" ng-model="vm.form.addr" class="form-control" id="inputEmail3" placeholder="">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-2 control-label text-right">学校:</label>
+          <div class="col-sm-8">
+            <input type="text" ng-model="vm.form.school" class="form-control" id="inputEmail3" placeholder="">
+          </div>
+        </div>
+      </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <md-button class="md-raised md-primary" ng-click="vm.submit()">确定</md-button>
+      <md-button class="md-raised md-danger" ng-click="vm.hide()">关闭</md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

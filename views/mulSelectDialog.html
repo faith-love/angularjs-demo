@@ -1,0 +1,75 @@
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <md-chips ng-model="vm.tags" md-removable="vm.removable" md-add-on-blur="vm.addOnBlur" readonly="vm.readonly">
+      <input type="submit" value="+" ng-click="vm.addTag()">
+    </md-chips>
+  </div>
+</div>
+
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+<button type="button" class="btn btn-primary">（首选项）Primary</button>
+
+<style>
+  md-chips-wrap {
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+  }
+
+  .md-chips {
+    padding: 8px;
+    padding-top: 2px;
+    box-shadow: none !important;
+    border-radius: 4px;
+  }
+
+  .md-chips.md-focused {
+    box-shadow: none !important
+  }
+
+  .md-chips md-chip {
+    line-height: 28px;
+    height: 28px;
+    border: 1px solid #ccc;
+    background-color: rgba(230, 230, 230, 0.5);
+    border-radius: 6px;
+    margin-right: 4px;
+    margin-top: 4px;
+  }
+
+  .md-chips md-chip .md-chip-content {
+    line-height: 26px;
+  }
+
+  .md-chips .md-chip-input-container {
+    border-radius: 50%;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    margin: 4px 0 0 0 !important;
+  }
+
+  .md-chips .md-chip-input-container input {
+    width: 26px;
+    height: 26px;
+    color: #fff !important;
+    line-height: 26px;
+  }
+
+  .md-chips md-chip .md-chip-remove {
+    width: 26px;
+    height: 26px;
+  }
+
+  .md-chips md-chip .md-chip-remove md-icon {
+    min-height: 18px;
+    min-width: 18px;
+    width: 18px;
+    height: 18px;
+  }
+</style>
